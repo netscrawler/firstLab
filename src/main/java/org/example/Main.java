@@ -33,15 +33,18 @@ class Main {
                 System.out.println("\n");
             }else{
                 System.out.println("Бег");
-                a.run(dist = 150);
+                a.run(dist = 301);
                 System.out.println("Плавание");
-                a.swim(distSw = 8);
+                a.swim(distSw = 30);
                 System.out.println("\n");
             }
         }
 
 
         System.out.println("Общее количество животных: " + Animal.getAnimalCount());
+        System.out.println("\n");
+
+        System.out.println("Общее количество базовых животных: " + (Animal.getAnimalCount()-EndangeredAnimal.getEndangeredAnimalCount()-RegionalAnimal.getRegionalAnimalCount()));
         System.out.println("Количество собак: " + Dog.getDogCount());
         System.out.println("Количество кошек: " + Cat.getCatCount());
         System.out.println("Количество тигров: " + Tiger.getTigerCount());
@@ -54,6 +57,7 @@ class Main {
         System.out.println("Количество краснокнижных животных: " + EndangeredAnimal.getEndangeredAnimalCount());
         System.out.println("Количество ласок: " + Stoat.getStoatCount());
         System.out.println("Количество амурских тигров: " + AmurTiger.getAmurTigerCount());
+        System.out.println("Количество Белых медведей: " + PolarBear.getAmurTigerCount());
 
 //        stoat1.count();
 //        amurTiger1.count();
