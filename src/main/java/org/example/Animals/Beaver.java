@@ -1,0 +1,41 @@
+package org.example.Animals;
+
+public class Beaver extends RegionalAnimal {
+    private static int beaverCount = 0;
+
+    public Beaver(String name, int maxRunDistance, int maxSwimDistance) {
+        super(name, maxRunDistance, maxSwimDistance);
+        beaverCount++;
+    }
+
+    @Override
+    public void run(int distance) {
+        if (distance <= maxRunDistance) {
+            System.out.println(name + " пробежал " + distance + " м");
+        } else {
+            System.out.println(name + " не может пробежать " + distance + " м");
+        }
+    }
+
+    @Override
+    public void swim(int distance) {
+        if (distance <= maxSwimDistance) {
+            System.out.println(name + " проплыл " + distance + " м");
+        } else {
+            System.out.println(name + " не может проплыть " + distance + " м");
+        }
+    }
+
+    @Override
+    public void dangerous(Animal potentialThreat) {
+        if (potentialThreat instanceof Tiger || potentialThreat instanceof Dog) {
+            System.out.println(name + " чувствует угрозу от " + potentialThreat.name);
+        } else {
+            System.out.println(name + " не чувствует угрозу от " + potentialThreat.name);
+        }
+    }
+
+    public static int getBeaverCount() {
+        return beaverCount;
+    }
+}
